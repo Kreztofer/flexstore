@@ -1,0 +1,68 @@
+.nav-container {
+  background-color: white;
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+    &.active {
+      color: var(--color-green);
+      font-weight: 500;
+    }
+  }
+}
+
+.navbar {
+  height: 70px;
+  width: 85%;
+  margin: auto;
+
+  nav {
+    margin-left: 200px;
+    font-size: 16px;
+  }
+}
+
+.logo {
+  color: var(--color-black);
+  font-size: 26px;
+  font-weight: 500;
+  span {
+    color: var(--color-green);
+  }
+}
+.icon {
+  width: 60%;
+}
+.cart {
+  position: relative;
+  span {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: var(--color-green);
+    color: white;
+  }
+}
+.drop-down {
+  position: relative;
+  cursor: pointer;
+  .menu {
+    width: 120px;
+    display: flex;
+    background-color: white;
+    position: absolute;
+    right: -40px;
+    top: 40px;
+    color: var(--color-green);
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px 10px 0px 10px;
+  }
+}

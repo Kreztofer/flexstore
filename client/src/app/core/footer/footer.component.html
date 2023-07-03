@@ -1,0 +1,18 @@
+<div class="footer">
+  <div class="footer-items">
+    <div class="footer-logo">
+      <a href="/" class="logo">flex<span>Store</span> </a>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+        ibero et velit interdum, ac aliquet odio mattis. Class aptent taciti
+        sociosqulitora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+    </div>
+    <div class="footer-content">
+      <div *ngFor="let footer of footerItems">
+        <h3>{{ footer.title }}</h3>
+        <p *ngFor="let item of footer.details">{{ item.detail }}</p>
+      </div>
+    </div>
+  </div>
+</div>

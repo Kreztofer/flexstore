@@ -1,0 +1,30 @@
+<div class="featured_container">
+  <div class="heading">
+    <h1>Featured Products</h1>
+    <div class="h-rule_green"></div>
+  </div>
+  <div class="d-flex featured-items">
+    <div class="featured-box shadow" *ngFor="let items of featured">
+      <img
+        class="new"
+        *ngIf="items.new"
+        src="../../../assets/images/new.png"
+        alt="new"
+      />
+      <img class="shoe" src="{{ items.img }}" alt="{{ items.name }}" />
+      <h3>{{ items.name }}</h3>
+
+      <img
+        class="rating"
+        *ngIf="items.rating === 5"
+        src="../../../assets//images//ratings.png"
+        alt="rating"
+      />
+
+      <p class="price">${{ items.price }}</p>
+    </div>
+  </div>
+  <div class="view-all">
+    <button routerLink="/shop">View all</button>
+  </div>
+</div>

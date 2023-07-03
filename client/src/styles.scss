@@ -1,7 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-/* Importing Bootstrap SCSS file. */
-@import "./node_modules/bootstrap/scss/bootstrap";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  background: #dde1e4 !important;
+}
+:root {
+  --color-black: #04212f;
+  --color-white: #fff;
+  --color-grey: #d1d1d1;
+  --color-green: #419d98;
+  --color-yellow: #de9706;
+}
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+.heading {
+  width: 100%;
+  text-align: center;
+}
+.h-rule_green {
+  width: 144px;
+  height: 6px;
+  background-color: var(--color-green);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+}
 
-/* Importing Datepicker SCSS file. */
-@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+.h-rule_yellow {
+  width: 144px;
+  height: 6px;
+  background-color: var(--color-yellow);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-bottom: 35px;
+}
+.margin-top {
+  margin-top: 65px;
+}
