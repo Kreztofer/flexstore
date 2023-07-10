@@ -6,7 +6,9 @@
     "PictureUrl": "images/products/sb-ang1.png",
     "Featured": true,
     "ProductTypeId": 1,
-    "ProductBrandId": 1
+    "ProductBrandId": 1,
+    "Rating": true,
+    "New": true
   },
   {
     "Name": "Green Angular Board 3000",

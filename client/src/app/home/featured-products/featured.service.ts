@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Observable, of } from 'rxjs';
 import { IFeaturedService } from './featured.interface';
 import { Featured } from 'src/app/shared/models/featured';

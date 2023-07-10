@@ -10,6 +10,8 @@ namespace API.Dtos
         public bool? Featured { get; set; }
         public string ProductType { get; set; }
         public string ProductBrand { get; set; }
+        public bool? Rating { get; set; }
+        public bool? New { get; set; }
 
     }
 }

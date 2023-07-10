@@ -45,8 +45,16 @@
     background-color: var(--color-green);
     color: white;
   }
-  .card {
-    margin-top: 40px;
-    padding: 0;
+  .pagination::ng-deep .page-item.active .page-link {
+    z-index: 1;
+    color: #ffffff;
+    background-color: var(--color-green) !important;
+    border-color: var(--color-green);
   }
+  .pagination::ng-deep .page-link {
+    color: var(--color-green);
+  }
+}
+li {
+  cursor: pointer;
 }

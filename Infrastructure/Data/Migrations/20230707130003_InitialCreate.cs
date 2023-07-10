@@ -44,11 +44,13 @@ namespace Infrastructure.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Price = table.Column<double>(type: "decimal(18,2)", nullable: false),
                     PictureUrl = table.Column<string>(type: "TEXT", nullable: false),
                     Featured = table.Column<bool>(type: "INTEGER", nullable: true),
                     ProductTypeId = table.Column<int>(type: "INTEGER", nullable: false),
-                    ProductBrandId = table.Column<int>(type: "INTEGER", nullable: false)
+                    ProductBrandId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Rating = table.Column<bool>(type: "INTEGER", nullable: true),
+                    New = table.Column<bool>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {

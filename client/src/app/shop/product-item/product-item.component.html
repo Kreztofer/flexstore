@@ -1,0 +1,16 @@
+<div class="card shadow-sm" *ngIf="product">
+  <img width="100%" src="{{ product.pictureUrl }}" height="225" />
+  <div class="body">
+    <h6>{{ product.name }}</h6>
+    <img
+      *ngIf="product.rating"
+      src="../../assets/images/ratings.png"
+      alt="rating"
+    />
+    <p>{{ product.price | currency }}</p>
+    <div class="btn-group">
+      <button type="button" class="view btn-search">Cart</button>
+      <button type="button" class="view btn-reset">View</button>
+    </div>
+  </div>
+</div>
