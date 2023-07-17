@@ -15,6 +15,7 @@ export class ShopComponent implements OnInit {
   products: Product[] = [];
   brands: Brand[] = [];
   color: Color[] = [];
+  img: string = '';
   shopParams = new ShopParams();
   sortOptions = [
     { name: 'Alphabetical', value: 'name' },

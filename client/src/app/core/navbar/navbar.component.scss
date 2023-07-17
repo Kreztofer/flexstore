@@ -2,9 +2,9 @@
   background-color: white;
   a {
     text-decoration: none;
-    color: var(--color-black);
+    color: #333333;
     &.active {
-      color: var(--color-green);
+      color: #000;
       font-weight: 500;
     }
   }
@@ -24,9 +24,10 @@
 .logo {
   color: var(--color-black);
   font-size: 26px;
+  margin-top: 10px;
   font-weight: 500;
   span {
-    color: var(--color-green);
+    color: var(--color-red);
   }
 }
 .icon {
@@ -46,7 +47,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: var(--color-green);
+    background-color: var(--color-red);
     color: white;
   }
 }
@@ -60,7 +61,7 @@
     position: absolute;
     right: -40px;
     top: 40px;
-    color: var(--color-green);
+    color: var(--color-black);
     font-weight: 500;
     border-radius: 5px;
     padding: 10px 10px 0px 10px;

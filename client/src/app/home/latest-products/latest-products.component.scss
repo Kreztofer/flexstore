@@ -1,0 +1,32 @@
+.latest {
+  display: flex;
+  margin-top: 130px;
+  .description {
+    width: 15%;
+    padding: 10px;
+    background-color: var(--color-black);
+    h2 {
+      color: white;
+      opacity: 0.9;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    p {
+      color: var(--color-grey);
+      opacity: 0.7;
+      font-style: italic;
+      font-size: 14px;
+    }
+  }
+  .items {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    height: 40vh;
+    background-color: var(--color-grey);
+    .items-wrapper {
+      width: 20%;
+      height: 100%;
+    }
+  }
+}

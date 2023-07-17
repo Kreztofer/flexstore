@@ -1,65 +1,31 @@
 .featured_container {
   margin-top: 100px;
-}
-.featured-items {
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 100px auto;
-  gap: 60px;
-}
-.featured-box {
-  width: 402px;
-  height: 498px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  align-items: center;
-  background-color: white;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.6s ease-in-out;
-  &:hover {
-    transform: scale(1.03);
-  }
-  h3 {
-    font-weight: 700;
+  h1 {
     font-size: 24px;
+    line-height: 1.2;
   }
-  .new {
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
-  .shoe {
-    width: 80%;
-    margin-right: 30px;
-  }
-  .rating {
-    margin-bottom: 10px;
-  }
-  .price {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--color-green);
-  }
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+  margin: auto;
 }
 .view-all {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   width: 100%;
   button {
-    padding: 7px 35px;
-    background-color: var(--color-green);
-    color: white;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 18px;
-    transition: all 0.4s ease-in-out;
+    padding: 7px 18px;
+    border: 2px solid var(--color-red);
+    background-color: transparent;
+    color: var(--color-red);
+    transition: all 0.4s ease-in;
     &:hover {
-      transform: scale(1.06);
+      background-color: var(--color-red);
+      color: white;
     }
   }
 }

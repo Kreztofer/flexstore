@@ -1,1 +1,32 @@
-<p>product-details works!</p>
+<div class="about-item" *ngIf="product">
+  <div class="about-image">
+    <img src="{{ product.pictureUrl }}" alt="" />
+  </div>
+  <div class="about-desc">
+    <h2>{{ product.name.toUpperCase() }}</h2>
+    <div class="price-rate">
+      <p class="price">{{ product.price | currency }}</p>
+      <p>
+        <img src="../../../assets/images/ratings.png" alt="" />
+      </p>
+    </div>
+    <hr />
+    <p>{{ product.description }}</p>
+
+    <div class="add-product">
+      <div class="quantity">
+        <div class="plus"><p>+</p></div>
+        <span>0</span>
+        <div class="minus"><p>-</p></div>
+      </div>
+      <button>ADD TO CART</button>
+    </div>
+    <div class="category">
+      <h4>Categories:</h4>
+      <div>
+        <p>{{ product.productBrand }},{{ product.productType }}</p>
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>

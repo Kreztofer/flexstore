@@ -1,16 +1,43 @@
-<div class="card shadow-sm" *ngIf="product">
-  <img width="100%" src="{{ product.pictureUrl }}" height="225" />
-  <div class="body">
-    <h6>{{ product.name }}</h6>
-    <img
-      *ngIf="product.rating"
-      src="../../assets/images/ratings.png"
-      alt="rating"
-    />
-    <p>{{ product.price | currency }}</p>
+<div
+  [ngClass]="
+    text === 'featured'
+      ? 'featured-card'
+      : text === 'new'
+      ? 'new-card'
+      : 'mycard'
+  "
+  *ngIf="product"
+>
+  <div routerLink="/shop/{{ product.id }}" class="image-container">
+    <img width="100%" src="{{ product.pictureUrl }}" />
     <div class="btn-group">
-      <button type="button" class="view btn-search">Cart</button>
-      <button type="button" class="view btn-reset">View</button>
+      <button routerLink="/about" type="button" class="btn-reset">
+        ADD TO CART
+      </button>
+      <button
+        type="button"
+        routerLink="/shop/{{ product.id }}"
+        class="btn-search"
+      >
+        <img
+          routerLink="/shop/{{ product.id }}"
+          src="../../../assets/images/view.png"
+          alt="image"
+        />
+      </button>
+    </div>
+  </div>
+  <div class="body">
+    <h6>{{ product.name.toUpperCase() }}</h6>
+    <div class="price-rating">
+      <p>{{ product.price | currency }}</p>
+      <div>
+        <img
+          *ngIf="product.rating"
+          src="../../assets/images/ratings.png"
+          alt="rating"
+        />
+      </div>
     </div>
   </div>
 </div>

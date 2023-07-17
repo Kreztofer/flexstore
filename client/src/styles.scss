@@ -9,14 +9,18 @@
   list-style: none;
 }
 body {
-  background: #dde1e4 !important;
+  position: relative;
 }
 :root {
   --color-black: #04212f;
   --color-white: #fff;
   --color-grey: #d1d1d1;
+  --color-grey1: #f5f5f5;
+  --color-grey2: #eae8e8;
   --color-green: #419d98;
   --color-yellow: #de9706;
+  --color-gold: #ffb21e;
+  --color-red: #f08758;
 }
 a {
   text-decoration: none;
@@ -37,16 +41,18 @@ a {
 }
 
 .h-rule_yellow {
-  width: 144px;
-  height: 6px;
-  background-color: var(--color-yellow);
+  width: 100px;
+  height: 4px;
+  background-color: var(--color-red);
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  border-radius: 5px;
   margin-bottom: 35px;
 }
 .margin-top {
-  margin-top: 65px;
+  margin-top: 40px;
 }
-
+label.xng-breadcrumb-trail {
+  color: #000 !important;
+  font-weight: 500;
+}

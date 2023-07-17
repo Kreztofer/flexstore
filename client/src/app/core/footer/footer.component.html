@@ -1,7 +1,7 @@
 <div class="footer">
   <div class="footer-items">
     <div class="footer-logo">
-      <a href="/" class="logo">flex<span>Store</span> </a>
+      <a href="/" class="logo">FLEXSTORE </a>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
         ibero et velit interdum, ac aliquet odio mattis. Class aptent taciti
@@ -10,7 +10,8 @@
     </div>
     <div class="footer-content">
       <div *ngFor="let footer of footerItems">
-        <h3>{{ footer.title }}</h3>
+        <h3>{{ footer.title.toUpperCase() }}</h3>
+        <div class="h-rule_red"></div>
         <p *ngFor="let item of footer.details">{{ item.detail }}</p>
       </div>
     </div>

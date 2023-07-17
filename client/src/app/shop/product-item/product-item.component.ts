@@ -4,9 +4,10 @@ import { Product } from 'src/app/shared/models/product';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.scss']
+  styleUrls: ['./product-item.component.scss'],
 })
 export class ProductItemComponent {
   @Input() product?: Product;
-
+  @Input() text?: string;
+  @Input() image?: string;
 }

@@ -18,7 +18,7 @@ export class AboutService implements IAboutService {
       {
         id: 2,
         img: '../../../assets/images/payment.png',
-        heading: 'Safe payment',
+        heading: 'Very Safe payment',
         about: 'We offer competitve prices on our 100 million plus product.',
       },
       {

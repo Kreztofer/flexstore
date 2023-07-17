@@ -1,60 +1,83 @@
 .shop {
   width: 85%;
-  margin: 120px auto 0px auto;
+  margin: 40px auto 0px auto;
   ul {
     width: 80%;
+    font-size: 15px;
   }
   select {
     width: 80%;
     padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid var(--color-grey);
     &:focus {
-      border: 1px solid var(--color-green);
+      border: 1px solid var(--color-black);
     }
   }
   li {
+    border: none;
     &.active {
-      background-color: var(--color-green);
+      background-color: transparent;
+      background-color: var(--color-black);
+      font-weight: 500;
       border: none;
     }
   }
   input {
     padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid var(--color-grey);
     &:focus {
-      border: 1px solid var(--color-green);
+      border: 1px solid var(--color-black);
     }
   }
   button {
     padding: 4px 15px;
-    border-radius: 5px;
     transition: all 0.4s ease-in-out;
     &:hover {
       transform: scale(1.06);
     }
   }
+  .category {
+    width: 22%;
+    margin-bottom: 50px;
+    h5 {
+      font-size: 18px;
+    }
+  }
+  .features {
+    width: 73%;
+    margin: 0px auto;
+  }
   .btn-search {
     background-color: transparent;
-    border: 1px solid var(--color-green);
+    border: 1px solid var(--color-black);
     font-weight: 500;
-    color: var(--color-green);
+    color: var(--color-black);
   }
   .btn-reset {
-    background-color: var(--color-green);
+    background-color: var(--color-black);
     color: white;
   }
   .pagination::ng-deep .page-item.active .page-link {
     z-index: 1;
     color: #ffffff;
-    background-color: var(--color-green) !important;
-    border-color: var(--color-green);
+    background-color: var(--color-black) !important;
+    border-color: var(--color-black);
   }
   .pagination::ng-deep .page-link {
-    color: var(--color-green);
+    color: var(--color-black);
   }
 }
 li {
   cursor: pointer;
+}
+.showing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.m-top {
+  margin-top: 100px;
+}
+.m-bottom {
+  margin-bottom: 180px;
 }

@@ -1,0 +1,113 @@
+.about-item {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 90px;
+  margin-top: 60px;
+  margin-bottom: 150px;
+  hr {
+    border-top: 2px dotted black;
+    height: 1px;
+    width: 100%;
+  }
+  .about-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #efefef;
+  }
+  .about-desc {
+    width: 95%;
+    h2 {
+      font-weight: 400;
+      font-size: 28px;
+    }
+  }
+  .price-rate {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .price {
+      color: var(--color-gold);
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+  .add-product {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    .quantity {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #777777;
+      padding: 5px;
+      justify-content: space-between;
+      height: 50px;
+      width: 120px;
+      .plus {
+        color: white;
+        width: 30px;
+        display: flex;
+        height: 80%;
+        border-radius: 100%;
+        justify-content: center;
+        padding-top: 6px;
+        align-items: center;
+        font-size: 30px;
+        background-color: var(--color-gold);
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          transform: scale(1.06);
+        }
+      }
+      .minus {
+        color: white;
+        width: 30px;
+        display: flex;
+        height: 80%;
+        border-radius: 100%;
+        justify-content: center;
+        padding-top: 6px;
+        align-items: center;
+        font-size: 30px;
+        background-color: var(--color-gold);
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          transform: scale(1.06);
+        }
+      }
+      span {
+        margin-bottom: 5px;
+      }
+    }
+    button {
+      padding: 0px 15px;
+      color: white;
+      background-color: var(--color-red);
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.06);
+      }
+    }
+  }
+  .category {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h4 {
+      font-size: 18px;
+    }
+    div {
+      display: flex;
+      margin-top: 10px;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<section class="latest">
+  <div class="description">
+    <h2>Latest Products</h2>
+    <p>
+      Subcribe to the Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+      erat
+    </p>
+  </div>
+  <div class="items">
+    <div class="items-wrapper" *ngFor="let product of latest">
+      <app-product-item [text]="'new'" [product]="product"></app-product-item>
+    </div>
+  </div>
+</section>

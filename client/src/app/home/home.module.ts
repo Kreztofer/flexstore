@@ -5,12 +5,22 @@ import { AboutComponent } from './about/about.component';
 import { HeroComponent } from './hero/hero.component';
 import { FeaturedProductsComponent } from './featured-products/featured-products.component';
 import { MobileAppComponent } from './mobile-app/mobile-app.component';
-import { TestimonialComponent } from './testimonial/testimonial.component';
 import { RouterModule } from '@angular/router';
+import { LatestProductsComponent } from './latest-products/latest-products.component';
+import { ShopModule } from '../shop/shop.module';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, HeroComponent,FeaturedProductsComponent,MobileAppComponent,TestimonialComponent],
-  imports: [CommonModule, RouterModule],
+  declarations: [
+    HomeComponent,
+    AboutComponent,
+    HeroComponent,
+    FeaturedProductsComponent,
+    MobileAppComponent,
+    LatestProductsComponent,
+    BlogComponent,
+  ],
+  imports: [CommonModule, RouterModule, ShopModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}
