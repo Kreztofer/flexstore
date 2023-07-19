@@ -11,7 +11,11 @@
   <div routerLink="/shop/{{ product.id }}" class="image-container">
     <img width="100%" src="{{ product.pictureUrl }}" />
     <div class="btn-group">
-      <button routerLink="/about" type="button" class="btn-reset">
+      <button
+        (click)="addItemToBasket(); $event.stopPropagation()"
+        type="button"
+        class="btn-reset"
+      >
         ADD TO CART
       </button>
       <button

@@ -15,7 +15,7 @@
         <a class="me-3 py-2" routerLinkActive="active" routerLink="/shop"
           >Shop</a
         >
-        <a class="py-2" routerLinkActive="active" routerLink="/about">About</a>
+        <a class="py-2" routerLinkActive="active" routerLink="/blog">Blog</a>
       </nav>
     </div>
     <div class="d-flex align-items-center">
@@ -27,9 +27,11 @@
           </div>
         </div>
       </div>
-      <a class="me-3 py-2 cart" href="#"
+      <a routerLink="/basket" class="me-3 py-2 cart"
         ><img class="icon" src="../../../assets/images/cart.png" alt="" />
-        <span>1</span></a
+        <span *ngIf="basketService.basketSource$ | async as basket">{{
+          getCount(basket.items)
+        }}</span></a
       >
     </div>
   </div>

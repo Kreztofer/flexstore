@@ -6,6 +6,7 @@
     <h2>{{ product.name.toUpperCase() }}</h2>
     <div class="price-rate">
       <p class="price">{{ product.price | currency }}</p>
+
       <p>
         <img src="../../../assets/images/ratings.png" alt="" />
       </p>
@@ -15,11 +16,16 @@
 
     <div class="add-product">
       <div class="quantity">
-        <div class="plus"><p>+</p></div>
-        <span>0</span>
-        <div class="minus"><p>-</p></div>
+        <div (click)="decrementQuantity()" class="minus"><p>-</p></div>
+        <span>{{ quantity }}</span>
+        <div (click)="incrementQuantity()" class="plus"><p>+</p></div>
       </div>
-      <button>ADD TO CART</button>
+      <button
+        [disabled]="quantity === quantityInBasket"
+        (click)="updateBasket()"
+      >
+        {{ buttonText }}
+      </button>
     </div>
     <div class="category">
       <h4>Categories:</h4>
