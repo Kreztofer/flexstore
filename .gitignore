@@ -477,3 +477,4 @@ $RECYCLE.BIN/
 *.lnk
 API/appsettings.json
 docker-compose.yml
+client/src/environments
