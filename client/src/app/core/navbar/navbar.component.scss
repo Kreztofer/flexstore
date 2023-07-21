@@ -51,19 +51,16 @@
     color: white;
   }
 }
-.drop-down {
-  position: relative;
-  cursor: pointer;
-  .menu {
-    width: 120px;
-    display: flex;
-    background-color: white;
-    position: absolute;
-    right: -40px;
-    top: 40px;
-    color: var(--color-black);
-    font-weight: 500;
-    border-radius: 5px;
-    padding: 10px 10px 0px 10px;
-  }
+.profile {
+  background-color: var(--color-black);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 100%;
+  color: white;
+}
+.dropdown-menu {
+  margin-top: 8px;
 }

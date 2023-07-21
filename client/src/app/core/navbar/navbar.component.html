@@ -18,14 +18,59 @@
         <a class="py-2" routerLinkActive="active" routerLink="/blog">Blog</a>
       </nav>
     </div>
-    <div class="d-flex align-items-center">
-      <div class="me-3 py-2" href="#">
-        <div (click)="toggleMenu()" class="drop-down">
-          <img class="icon" src="../../../assets/images/account.png" alt="" />
-          <div class="menu shadow-lg" *ngIf="isMenuOpened">
-            <p class="menu-item">Sign-in</p>
+    <div class="d-flex justify-content-center align-items-center">
+      <div style="margin-right: 25px">
+        <ng-container *ngIf="(accountService.currentUser$ | async) === null">
+          <div dropdown class="dropdown" style="cursor: pointer">
+            <div dropdownToggle>
+              <img
+                class="icon"
+                src="../../../assets/images/account.png"
+                alt="account"
+              />
+            </div>
+            <div *dropdownMenu class="dropdown-menu">
+              <li class="py-1">
+                <a class="dropdown-item" routerLink="/account/login">
+                  <i class="fa fa-sign-in me-3"></i> Login
+                </a>
+              </li>
+            </div>
           </div>
-        </div>
+        </ng-container>
+
+        <!--  -->
+        <ng-container *ngIf="accountService.currentUser$ | async as user">
+          <div
+            dropdown
+            class="dropdown"
+            style="display: flex; align-items: center; cursor: pointer"
+          >
+            <div dropdownToggle class="profile">
+              <p style="font-size: 18px">
+                {{ user.displayName.charAt(0).toUpperCase() }}
+              </p>
+            </div>
+            <div *dropdownMenu class="dropdown-menu">
+              <li class="py-1">
+                <a class="dropdown-item" routerLink="/basket">
+                  <i class="fa fa-shopping-cart me-3"></i> View basket
+                </a>
+              </li>
+              <li class="py-1">
+                <a class="dropdown-item" routerLink="/orders">
+                  <i class="fa fa-history me-3"></i> View orders
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="py-1">
+                <a (click)="accountService.logout()" class="dropdown-item">
+                  <i class="fa fa-sign-out me-3"></i> Logout
+                </a>
+              </li>
+            </div>
+          </div>
+        </ng-container>
       </div>
       <a routerLink="/basket" class="me-3 py-2 cart"
         ><img class="icon" src="../../../assets/images/cart.png" alt="" />

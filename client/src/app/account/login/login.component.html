@@ -1,0 +1,39 @@
+<div class="login">
+  <div
+    class="d-flex justify-content-center"
+    style="margin-top: 100px; margin-bottom: 260px"
+  >
+    <div class="col-3">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="text-center mb-4">
+          <h1 class="mb-3">Login</h1>
+        </div>
+        <app-text-input
+          [formControl]="loginForm.controls['email']"
+          [label]="'Email Address'"
+        ></app-text-input>
+        <app-text-input
+          [formControl]="loginForm.controls['password']"
+          [type]="'password'"
+          [label]="'Password'"
+        ></app-text-input>
+
+        <div class="d-grid">
+          <button
+            [disabled]="loginForm.invalid"
+            type="submit"
+            class="btn btn-lg mt-3 btn-primary"
+          >
+            Sign In
+          </button>
+        </div>
+        <p style="margin-top: 20px">
+          No account?
+          <strong style="cursor: pointer" routerLink="/account/register"
+            >Sign Up</strong
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

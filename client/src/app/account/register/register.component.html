@@ -1,0 +1,49 @@
+<div class="register">
+  <div
+    class="d-flex justify-content-center"
+    style="margin-top: 100px; margin-bottom: 260px"
+  >
+    <div class="col-3">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="text-center mb-4">
+          <h1 class="mb-3">Register</h1>
+        </div>
+        <app-text-input
+          [formControl]="registerForm.controls['displayName']"
+          [label]="'UserName'"
+        ></app-text-input>
+        <app-text-input
+          [formControl]="registerForm.controls['email']"
+          [label]="'Email Address'"
+        ></app-text-input>
+        <app-text-input
+          [formControl]="registerForm.controls['password']"
+          [type]="'password'"
+          [label]="'Password'"
+        ></app-text-input>
+
+        <ul class="text-danger list-unstyled" *ngIf="errors">
+          <li *ngFor="let error of errors">
+            {{ error }}
+          </li>
+        </ul>
+
+        <div class="d-grid">
+          <button
+            [disabled]="registerForm.invalid"
+            type="submit"
+            class="btn btn-lg mt-3 btn-primary"
+          >
+            Sign Up
+          </button>
+        </div>
+        <p style="margin-top: 20px">
+          Already have an account?
+          <strong style="cursor: pointer" routerLink="/account/login"
+            >Login</strong
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
