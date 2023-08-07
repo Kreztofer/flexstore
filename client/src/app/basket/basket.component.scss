@@ -27,7 +27,7 @@
   }
 }
 .no-item {
-  width: 100%;
+  width: 900px;
   height: 100vh;
   position: absolute;
   z-index: -1;
@@ -39,6 +39,9 @@
   align-items: center;
   padding-left: 110px;
   font-size: 20px;
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
   button {
     padding: 10px 20px;
   }
