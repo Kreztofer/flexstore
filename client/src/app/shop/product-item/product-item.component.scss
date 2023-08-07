@@ -3,16 +3,23 @@
   padding-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 230px;
+  width: 180px;
   height: auto;
   margin-right: 15px;
   margin-bottom: 20px;
+  @media screen and (min-width: 810px) {
+    width: 220px;
+  }
   .image-container {
     background-color: #efefef;
     cursor: pointer;
     position: relative;
     img {
-      height: 210px;
+      height: 200px;
+      object-fit: contain;
+      @media screen and (min-width: 810px) {
+        height: 220px;
+      }
     }
     &:hover {
       .btn-group {
@@ -23,8 +30,11 @@
   .body {
     margin-top: 10px;
     h6 {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
+      @media screen and (min-width: 810px) {
+       font-size: 14px;
+      }
     }
   }
   .price-rating {
@@ -109,7 +119,8 @@
     display: flex;
     justify-content: center;
     img {
-      height: 290px;
+      height: 260px;
+      object-fit: contain;
     }
     cursor: pointer;
     position: relative;
@@ -198,19 +209,23 @@
 .new-card {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 300px;
   height: 100%;
   padding-bottom: 20px;
   background-color: #efefef;
   border-right: 1px solid #fff;
   border-bottom: 1px solid var(--color-black);
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
   .image-container {
     background-color: #efefef;
     cursor: pointer;
     height: 83%;
     position: relative;
     img {
-      height: 100%;
+      height: 250px;
+      object-fit: contain;
     }
     &:hover {
       .btn-group {

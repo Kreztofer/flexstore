@@ -2,15 +2,17 @@ using Core.Entities;
 
 namespace Core.Specifications
 {
-public class ProductsWithTypesAndBrandsSpecification : BaseSpecification<Product>
+    public class ProductsWithTypesAndBrandsSpecification : BaseSpecification<Product>
     {
         public ProductsWithTypesAndBrandsSpecification(ProductSpecParams productParams)
         : base(x =>
         (string.IsNullOrEmpty(productParams.Search) || x.Name.ToLower().Contains(productParams.Search)) &&
         (!productParams.BrandId.HasValue || x.ProductBrandId == productParams.BrandId) &&
-         (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId)
+         (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId) &&
+         (!productParams.FeaturedId.HasValue || x.FeaturedId == productParams.FeaturedId)
         )
         {
+            AddInclude(x => x.Featured);
             AddInclude(x => x.ProductType);
             AddInclude(x => x.ProductBrand);
             AddOrderBy(x => x.Name);
@@ -37,6 +39,7 @@ public class ProductsWithTypesAndBrandsSpecification : BaseSpecification<Product
         {
             AddInclude(x => x.ProductType);
             AddInclude(x => x.ProductBrand);
+            AddInclude(x => x.Featured);
         }
     }
 }

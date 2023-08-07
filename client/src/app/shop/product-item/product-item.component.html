@@ -35,9 +35,29 @@
     <h6>{{ product.name.toUpperCase() }}</h6>
     <div class="price-rating">
       <p>{{ product.price | currency }}</p>
-      <div>
+      <div *ngIf="product.rating">
         <img
-          *ngIf="product.rating"
+          *ngIf="product.rating <= 3"
+          src="../../assets/images/ratings3.png"
+          alt="rating"
+        />
+        <img
+          *ngIf="product.rating > 3 && product.rating < 4"
+          src="../../assets/images/ratings35.png"
+          alt="rating"
+        />
+        <img
+          *ngIf="product.rating === 4"
+          src="../../assets/images/ratings4.png"
+          alt="rating"
+        />
+        <img
+          *ngIf="product.rating > 4 && product.rating < 5"
+          src="../../assets/images/ratings45.png"
+          alt="rating"
+        />
+        <img
+          *ngIf="product.rating >= 5"
           src="../../assets/images/ratings.png"
           alt="rating"
         />

@@ -42,8 +42,8 @@ var logger = services.GetRequiredService<ILogger<Program>>();
 try
 {
     await context.Database.MigrateAsync();
-    await identityContext.Database.MigrateAsync();
     await StoreContextSeed.SeedAsync(context);
+    await identityContext.Database.MigrateAsync();
     await AppIdentityDbContextSeed.SeedUserAsync(userManager);
 }
 catch (Exception ex)

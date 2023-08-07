@@ -1,1 +1,33 @@
-<p class="checkout">Welcome to checkout</p>
+<div class="checkout">
+  <div class="display">
+    <div class="items">
+      <app-stepper [linearModeSelected]="false" #appStepper>
+        <cdk-step
+          [completed]="checkoutForm.get('addressForm')?.valid"
+          [label]="'Address'"
+          ><app-checkout-address
+            [checkoutForm]="checkoutForm"
+          ></app-checkout-address
+        ></cdk-step>
+        <cdk-step
+          [completed]="checkoutForm.get('deliveryForm')?.valid"
+          [label]="'Delivery'"
+          ><app-checkout-delivery
+            [checkoutForm]="checkoutForm"
+          ></app-checkout-delivery
+        ></cdk-step>
+        <cdk-step [label]="'Review'"
+          ><app-checkout-review></app-checkout-review
+        ></cdk-step>
+        <cdk-step [label]="'Payment'"
+          ><app-checkout-payment
+            [checkoutForm]="checkoutForm"
+          ></app-checkout-payment
+        ></cdk-step>
+      </app-stepper>
+    </div>
+    <div class="summary">
+      <app-order-totals></app-order-totals>
+    </div>
+  </div>
+</div>

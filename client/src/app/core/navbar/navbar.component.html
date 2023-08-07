@@ -1,4 +1,4 @@
-<div class="mb-4 border-bottom shadow-sm fixed-top nav-container">
+<div class="shadow-sm fixed-top nav-container">
   <div
     class="navbar d-flex flex-row justify-content-between align-items-center"
   >
@@ -18,7 +18,7 @@
         <a class="py-2" routerLinkActive="active" routerLink="/blog">Blog</a>
       </nav>
     </div>
-    <div class="d-flex justify-content-center align-items-center">
+    <div class="second justify-content-center align-items-center">
       <div style="margin-right: 25px">
         <ng-container *ngIf="(accountService.currentUser$ | async) === null">
           <div dropdown class="dropdown" style="cursor: pointer">
@@ -79,5 +79,6 @@
         }}</span></a
       >
     </div>
+    <i class="menu fa fa-bars"></i>
   </div>
 </div>

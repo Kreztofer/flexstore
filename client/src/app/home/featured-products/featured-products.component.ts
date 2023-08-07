@@ -13,8 +13,19 @@ export class FeaturedProductsComponent implements OnInit {
   constructor(private featuredService: FeaturedService) {}
 
   ngOnInit() {
-    this.featuredService
-      .getFeatured()
-      .subscribe((featured) => (this.featured = featured));
+    this.getProducts();
+    // this.getTestProducts();
+  }
+  getProducts() {
+    this.featuredService.getFeaturedProducts().subscribe({
+      next: (response) => (this.featured = response.data),
+      error: (error) => console.log(error),
+    });
+  }
+  getTestProducts() {
+    this.featuredService.getFeatured().subscribe({
+      next: (response) => (this.featured = response),
+      error: (error) => console.log(error),
+    });
   }
 }

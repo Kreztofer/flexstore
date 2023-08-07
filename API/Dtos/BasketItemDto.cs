@@ -6,7 +6,7 @@ namespace API.Dtos
     {
         [Required]
         public int Id { get; set; }
-        [Required] 
+        [Required]
         public string ProductName { get; set; }
         [Required]
         [Range(0.1, double.MaxValue, ErrorMessage = "Price must be greater than 0")]

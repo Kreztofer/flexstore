@@ -13,7 +13,7 @@ import { take } from 'rxjs';
 })
 export class ProductDetailsComponent implements OnInit {
   product?: Product;
-  quantity = 1;
+  quantity = 0;
   quantityInBasket = 0;
 
   constructor(
@@ -49,9 +49,18 @@ export class ProductDetailsComponent implements OnInit {
   }
   incrementQuantity() {
     this.quantity++;
+    console.log(this.product);
   }
   decrementQuantity() {
     this.quantity--;
+  }
+  removeBasketItem(id: number, quantity: number) {
+    this.basketService.removeItemFromBasket(id, quantity);
+    this.quantity--;
+  }
+  addBasketItem(item: any) {
+    this.basketService.addItemToBasket(item);
+    this.quantity++;
   }
   updateBasket() {
     if (this.product) {

@@ -1,4 +1,18 @@
 .checkout {
   width: 85%;
   margin: auto;
+  .display {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+  }
+}
+.items {
+  width: 900px;
+  margin: auto;
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
 }

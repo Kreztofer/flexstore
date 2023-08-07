@@ -1,6 +1,8 @@
 <ng-container *ngIf="$any(bcService.breadcrumbs$ | async) as breadcrumbs">
   <section
-    *ngIf="breadcrumbs[breadcrumbs.length - 1].label !== 'Home'"
+    *ngIf="
+      breadcrumbs[breadcrumbs.length - 1].label !== 'Home' 
+    "
     class="bedcrumb"
   >
     <nav>

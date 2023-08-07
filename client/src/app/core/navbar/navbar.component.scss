@@ -13,21 +13,38 @@
 .navbar {
   height: 70px;
   width: 85%;
-  margin: auto;
-
+  margin-left: auto;
+  margin-right: auto;
   nav {
     margin-left: 200px;
     font-size: 16px;
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+  .menu {
+    display: flex;
+    font-size: 24px;
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+  .second {
+    display: none;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 }
 
 .logo {
   color: var(--color-black);
-  font-size: 26px;
+  font-size: 22px;
   margin-top: 10px;
   font-weight: 500;
-  span {
-    color: var(--color-red);
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
   }
 }
 .icon {

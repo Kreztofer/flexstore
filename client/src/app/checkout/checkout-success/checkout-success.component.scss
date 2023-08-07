@@ -1,0 +1,42 @@
+.success-container {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+  margin-left: 25px;
+  @media screen and (min-width: 1200px) {
+    width: 87%;
+    margin: auto;
+  }
+  .item-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 43%;
+    height: 380px;
+    padding-top: 100px;
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 150px;
+      border-radius: 0px;
+      height: 50px;
+      margin-top: 30px;
+      background-color: #198754;
+      color: white;
+      &:hover {
+        background-color: transparent;
+        color: #198754;
+      }
+    }
+  }
+  .img-container {
+    width: 55%;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+button.nav-link {
+  background-color: #e9ecef;
+  border-radius: 0;
+  border: none;
+  color: #333;
+}
+.nav-pills .nav-link.active {
+  background-color: var(--color-black);
+}

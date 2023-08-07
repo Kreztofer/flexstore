@@ -1,1 +1,25 @@
-<section class="about">about</section>
+<section class="about">
+  <div class="about_img">
+    <div class="backdrop"></div>
+    <img src="../../assets/images/backg.jpg" alt="" />
+    <div class="write-up">
+      <p>Welcome to our blog</p>
+      <h4>All You Need To Know About Our Top Sneakers</h4>
+    </div>
+  </div>
+  <div class="blog_content">
+    <h4>LATEST STORIES</h4>
+    <div class="all_blogs">
+      <div *ngFor="let blog of blog" class="blog">
+        <div class="blog-img">
+          <img src="{{ blog.blogImg }}" alt="" />
+        </div>
+        <div class="blog-details">
+          <h5>{{ blog.title }}</h5>
+          <p>{{ blog.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</section>

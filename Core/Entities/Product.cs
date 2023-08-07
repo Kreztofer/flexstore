@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 
 namespace Core.Entities
 {
@@ -8,15 +7,13 @@ namespace Core.Entities
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string PictureUrl { get; set; }
-        public bool? Featured { get; set; }
+        public FeaturedProduct Featured { get; set; }
+        public int FeaturedId { get; set; }
         public ProductType ProductType { get; set; }
         public int ProductTypeId { get; set; }
         public ProductBrand ProductBrand { get; set; }
         public int ProductBrandId { get; set; }
-
-        public bool? Rating { get; set; }
-
-        public bool? New { get; set; }
-
+        public decimal Rating { get; set; }
+ 
     }
 }

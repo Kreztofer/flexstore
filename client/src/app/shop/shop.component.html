@@ -1,94 +1,108 @@
-<div class="shop">
-  <div class="row" *ngIf="color.length > 0 && brands.length > 0">
-    <section class="col-3 mt-1 category">
-      <div>
-        <h5 class="mb-3">CATEGORIES</h5>
+<div class="main">
+  <div class="shop">
+    <div class="row" *ngIf="color.length > 0 && brands.length > 0">
+      <section class="col-3 mt-1 category">
+        <div>
+          <h5 class="mb-3">CATEGORIES</h5>
+          <hr />
+        </div>
+        <div>
+          <h5>Brands</h5>
+          <ul class="list-group my-3">
+            <li
+              class="list-group-item"
+              [class.active]="brand.id === shopParams.brandId"
+              [value]="brand.id"
+              (click)="onBrandSelected(brand.id)"
+              *ngFor="let brand of brands"
+            >
+              {{ brand.name }}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5>Color</h5>
+          <ul class="list-group my-3">
+            <li
+              class="list-group-item"
+              [class.active]="color.id === shopParams.typeId"
+              [value]="color.id"
+              (click)="onTypeSelected(color.id)"
+              *ngFor="let color of color"
+            >
+              {{ color.name }}
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="col-9 features">
+        <div class="pb-2 header">
+          <div class="showing">
+            <app-paging-header
+              [totalCount]="totalCount"
+              [pageNumber]="shopParams.pageNumber"
+              [pageSize]="shopParams.pageSize"
+            ></app-paging-header>
+            <select (change)="onSortSelected($event)">
+              <option *ngFor="let sort of sortOptions" [value]="sort.value">
+                {{ sort.name }}
+              </option>
+            </select>
+          </div>
+          <div class="d-flex search mt-2">
+            <input
+              (keyup.enter)="onSearch()"
+              type="text"
+              placeholder="Search"
+              class="me-2"
+              #search
+            />
+            <button (click)="onSearch()" class="btn-reset me-1">
+              <img src="../../assets/images/search.png" alt="search" />
+            </button>
+            <button (click)="onReset()" class="btn-reset">
+              <img src="../../assets/images/reset.png" alt="reset" />
+            </button>
+          </div>
+        </div>
+        <div *ngIf="totalCount > 0" class="shoes">
+          <div *ngFor="let product of products">
+            <app-product-item [product]="product"></app-product-item>
+          </div>
+        </div>
+        <div *ngIf="totalCount === 0" class="mt-5">
+          <h3>
+            No items found click
+            <strong style="cursor: pointer" (click)="onReset()">RESET</strong>
+          </h3>
+        </div>
         <hr />
-      </div>
-      <div>
-        <h5>Brands</h5>
-        <ul class="list-group my-3">
-          <li
-            class="list-group-item"
-            [class.active]="brand.id === shopParams.brandId"
-            [value]="brand.id"
-            (click)="onBrandSelected(brand.id)"
-            *ngFor="let brand of brands"
-          >
-            {{ brand.name }}
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h5>Color</h5>
-        <ul class="list-group my-3">
-          <li
-            class="list-group-item"
-            [class.active]="color.id === shopParams.typeId"
-            [value]="color.id"
-            (click)="onTypeSelected(color.id)"
-            *ngFor="let color of color"
-          >
-            {{ color.name }}
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="col-9 features">
-      <div class="d-flex justify-content-between align-items-center pb-2">
-        <div class="showing">
-          <app-paging-header
-            [totalCount]="totalCount"
-            [pageNumber]="shopParams.pageNumber"
-            [pageSize]="shopParams.pageSize"
-          ></app-paging-header>
-          <select (change)="onSortSelected($event)">
-            <option *ngFor="let sort of sortOptions" [value]="sort.value">
-              {{ sort.name }}
-            </option>
-          </select>
-        </div>
 
-        <div class="d-flex mt-2">
-          <input
-            (keyup.enter)="onSearch()"
-            type="text"
-            placeholder="Search"
-            class="me-2"
-            #search
-          />
-          <button (click)="onSearch()" class="btn-reset me-1">
-            <img src="../../assets/images/search.png" alt="search" />
-          </button>
-          <button (click)="onReset()" class="btn-reset">
-            <img src="../../assets/images/reset.png" alt="reset" />
-          </button>
-        </div>
-      </div>
-      <div *ngIf="totalCount > 0" class="row row-cols-4">
-        <div *ngFor="let product of products">
-          <app-product-item [product]="product"></app-product-item>
-        </div>
-      </div>
-      <div *ngIf="totalCount === 0" class="mt-5">
-        <h3>
-          No items found click
-          <strong style="cursor: pointer" (click)="onReset()">RESET</strong>
-        </h3>
-      </div>
-      <hr />
-
-      <div
-        *ngIf="totalCount > 0"
-        class="flex justify-content-center m-bottom pagination m-top"
-      >
-        <app-pager
-          [totalCount]="totalCount"
-          [pageSize]="shopParams.pageSize"
-          (pageChanged)="onPageChanged($event)"
+        <div
+          *ngIf="totalCount > 0"
+          class="flex justify-content-center m-bottom pagination m-top"
         >
-        </app-pager>
-      </div>
-    </section>
+          <app-pager
+            [totalCount]="totalCount"
+            [pageSize]="shopParams.pageSize"
+            (pageChanged)="onPageChanged($event)"
+          >
+          </app-pager>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div>
+      <p>
+        SORT BY
+        <img src="../../assets/images/sort.png" alt="sort" />
+      </p>
+    </div>
+    <div>
+      <p>
+        CATEGORIES <img src="../../assets/images/category.png" alt="category" />
+      </p>
+    </div>
   </div>
 </div>

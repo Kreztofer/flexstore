@@ -4,9 +4,8 @@ export interface Featured {
   description: string;
   price: number;
   pictureUrl: string;
-  featured?: boolean;
+  featured?: string;
   productType: string;
   productBrand: string;
-  rating?: boolean;
-  new?: boolean;
+  rating?: number;
 }

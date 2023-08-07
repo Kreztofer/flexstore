@@ -6,4 +6,6 @@ import { AboutRoutingModule } from './about-routing.module';
   declarations: [],
   imports: [CommonModule, AboutRoutingModule],
 })
-export class AboutAppModule {}
+export class AboutAppModule {
+
+}

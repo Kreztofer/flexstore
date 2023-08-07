@@ -44,6 +44,7 @@ namespace API.Controllers
         {
             return await _userManager.FindByEmailAsync(email) != null;
         }
+        [Authorize]
         [HttpGet("address")]
         public async Task<ActionResult<AddressDto>> GetUserAddress()
         {
@@ -53,6 +54,7 @@ namespace API.Controllers
             return _mapper.Map<Address, AddressDto>(user.Address);
 
         }
+        [Authorize]
         [HttpPut("address")]
         public async Task<ActionResult<AddressDto>> UdateUserAddress(AddressDto address)
         {

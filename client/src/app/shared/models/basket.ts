@@ -3,6 +3,7 @@ import * as cuid from 'cuid';
 export interface Basket {
   id: string;
   items: BasketItem[];
+  deliveryMethodId?: number;
 }
 
 export interface BasketItem {

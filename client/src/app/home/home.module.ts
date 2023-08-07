@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { LatestProductsComponent } from './latest-products/latest-products.component';
 import { ShopModule } from '../shop/shop.module';
 import { BlogComponent } from './blog/blog.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { BlogComponent } from './blog/blog.component';
     LatestProductsComponent,
     BlogComponent,
   ],
-  imports: [CommonModule, RouterModule, ShopModule],
+  imports: [CommonModule, RouterModule, ShopModule, SharedModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}

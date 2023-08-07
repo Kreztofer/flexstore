@@ -2,19 +2,23 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { ILatestService } from './latest.interface';
 import { Featured } from 'src/app/shared/models/featured';
+import { HttpClient } from '@angular/common/http';
+import { Pagination } from 'src/app/shared/models/pagination';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LatestService implements ILatestService {
+export class LatestService {
+  baseUrl = 'https://localhost:5001/api/';
+
+  constructor(private http: HttpClient) {}
   getLatest(): Observable<Featured[]> {
     return of([
       {
         id: 1,
         pictureUrl: '../../../assets/images/shoe1.png',
-        new: true,
         name: 'Nike Ventures',
-        rating: true,
+        rating: 4,
         description: 'Hello',
         productType: 'blue',
         productBrand: 'nike',
@@ -25,7 +29,7 @@ export class LatestService implements ILatestService {
         pictureUrl: '../../../assets/images/shoe2.png',
         name: 'Nike Ventures',
         description: 'Hello',
-        rating: true,
+        rating: 4,
         price: 2500,
         productType: 'blue',
         productBrand: 'nike',
@@ -35,7 +39,7 @@ export class LatestService implements ILatestService {
         pictureUrl: '../../../assets/images/shoe3.png',
         name: 'Nike Ventures',
         description: 'Hello',
-        rating: true,
+        rating: 4,
         price: 2500,
         productType: 'blue',
         productBrand: 'nike',
@@ -45,7 +49,7 @@ export class LatestService implements ILatestService {
         pictureUrl: '../../../assets/images/shoe9.png',
         name: 'Nike Ventures',
         description: 'Hello',
-        rating: true,
+        rating: 4,
         price: 2500,
         productType: 'blue',
         productBrand: 'nike',
@@ -53,14 +57,18 @@ export class LatestService implements ILatestService {
       {
         id: 5,
         pictureUrl: '../../../assets/images/shoe5.png',
-        new: true,
         name: 'Nike Ventures',
         description: 'Hello',
-        rating: true,
+        rating: 4,
         price: 2500,
         productType: 'blue',
         productBrand: 'nike',
       },
     ]);
+  }
+  getLatestProducts() {
+    return this.http.get<Pagination<Featured[]>>(
+      this.baseUrl + 'products?featuredId=3'
+    );
   }
 }

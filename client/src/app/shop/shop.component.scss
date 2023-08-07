@@ -1,3 +1,6 @@
+.main {
+  position: relative;
+}
 .shop {
   width: 85%;
   margin: 40px auto 0px auto;
@@ -36,16 +39,43 @@
       transform: scale(1.06);
     }
   }
+
   .category {
-    width: 22%;
+    width: 20%;
+    display: none;
     margin-bottom: 50px;
     h5 {
       font-size: 18px;
     }
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
   }
   .features {
-    width: 73%;
-    margin: 0px auto;
+    width: 100%;
+    margin: 0px;
+    @media screen and (min-width: 1200px) {
+      width: 78%;
+      margin: 0px auto;
+    }
+    .header {
+      width: 98%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .shoes {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @media screen and (min-width: 740px) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @media screen and (min-width: 1020px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
   }
   .btn-search {
     background-color: transparent;
@@ -71,13 +101,53 @@ li {
   cursor: pointer;
 }
 .showing {
-  display: flex;
-  align-items: center;
+  display: none;
   gap: 10px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .m-top {
   margin-top: 100px;
 }
 .m-bottom {
-  margin-bottom: 180px;
+  margin-bottom: 100px;
+}
+.search {
+  width: auto;
+  justify-content: flex-end;
+  margin-right: 18px;
+  margin-bottom: 8px;
+}
+.mobile-menu {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  bottom: 0px;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  color: white;
+  width: 100%;
+  div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    padding-top: 12px;
+    border-right: 1px solid white;
+    height: 100%;
+    justify-content: center;
+    p {
+      font-size: 14px;
+      cursor: pointer;
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 }

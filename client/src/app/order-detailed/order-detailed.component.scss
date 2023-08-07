@@ -1,0 +1,23 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+  .right-col {
+    width: 900px;
+    @media screen and (min-width: 1200px) {
+      width: 70%;
+    }
+  }
+  .left-col {
+    width: 95%;
+    @media screen and (min-width: 1020px) {
+      width: 60%;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 25%;
+    }
+  }
+}

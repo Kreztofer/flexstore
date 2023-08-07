@@ -13,8 +13,13 @@ export class LatestProductsComponent implements OnInit {
   constructor(private latestService: LatestService) {}
 
   ngOnInit() {
-    this.latestService
-      .getLatest()
-      .subscribe((latest) => (this.latest = latest));
+    this.getLatestProducts();
+  }
+
+  getLatestProducts() {
+    this.latestService.getLatestProducts().subscribe({
+      next: (res) => (this.latest = res.data),
+      error: (error) => console.log(error),
+    });
   }
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from '../shared/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { TestErrorComponent } from './test-error/test-error.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -15,7 +15,6 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent,
     TestErrorComponent,
     NotFoundComponent,
     ServerErrorComponent,
@@ -32,11 +31,6 @@ import { SharedModule } from '../shared/shared.module';
       preventDuplicates: true,
     }),
   ],
-  exports: [
-    NavbarComponent,
-    FooterComponent,
-    SectionHeaderComponent,
-    NgxSpinnerModule,
-  ],
+  exports: [NavbarComponent, SectionHeaderComponent, NgxSpinnerModule],
 })
 export class CoreModule {}

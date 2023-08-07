@@ -1,166 +1,722 @@
 [
   {
-    "Name": "Angular Speedster Board 2000",
+    "Name": "ADIDAS Originals Superstar",
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 200,
-    "PictureUrl": "images/products/sb-ang1.png",
-    "Featured": true,
+    "Price": 210,
+    "PictureUrl": "images/products/adidas1.png",
     "ProductTypeId": 1,
-    "ProductBrandId": 1,
-    "Rating": true,
-    "New": true
+    "ProductBrandId": 2,
+    "FeaturedId": 1,
+    "Rating": 4.5
   },
   {
-    "Name": "Green Angular Board 3000",
-    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
+    "Name": "Vans Old Skool Checkerboard Slip-On",
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna..",
     "Price": 150,
-    "PictureUrl": "images/products/sb-ang2.png",
+    "PictureUrl": "images/products/vans1.png",
+    "FeaturedId": 1,
     "ProductTypeId": 1,
-    "Featured": false,
-    "ProductBrandId": 1
+    "ProductBrandId": 5,
+    "Rating": 4.5
   },
   {
-    "Name": "Core Board Speed Rush 3",
+    "Name": "New Balance 990v5 Grey",
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 180,
-    "PictureUrl": "images/products/sb-core1.png",
-    "ProductTypeId": 1,
-    "Featured": true,
-    "ProductBrandId": 2
+    "PictureUrl": "images/products/new1.png",
+    "FeaturedId": 1,
+    "ProductTypeId": 5,
+    "ProductBrandId": 3,
+    "Rating": 5
   },
   {
-    "Name": "Net Core Super Board",
+    "Name": "Nike Air Max 270 NSW",
     "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     "Price": 300,
-    "PictureUrl": "images/products/sb-core2.png",
+    "PictureUrl": "images/products/nike1.png",
+    "FeaturedId": 2,
     "ProductTypeId": 1,
-    "Featured": true,
-    "ProductBrandId": 2
+    "ProductBrandId": 1,
+    "Rating": 4
   },
   {
-    "Name": "React Board Super Whizzy Fast",
+    "Name": "Puma RBD Game Sneakers",
     "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     "Price": 250,
-    "PictureUrl": "images/products/sb-react1.png",
-    "ProductTypeId": 1,
-    "Featured": true,
-    "ProductBrandId": 4
+    "PictureUrl": "images/products/puma1.png",
+    "FeaturedId": 3,
+    "ProductTypeId": 4,
+    "ProductBrandId": 4,
+    "Rating": 5
   },
   {
-    "Name": "Typescript Entry Board",
-    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+    "Name": "Nike Air Max 2090 EOI NSW",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna..",
     "Price": 120,
-    "PictureUrl": "images/products/sb-ts1.png",
-    "ProductTypeId": 1,
-    "Featured": false,
-    "ProductBrandId": 5
+    "PictureUrl": "images/products/nike2.png",
+    "ProductTypeId": 4,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 4.5
   },
   {
-    "Name": "Core Blue Hat",
+    "Name": "ADIDAS Advantage BaseCourt",
     "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 10,
-    "PictureUrl": "images/products/hat-core1.png",
-    "ProductTypeId": 2,
-    "Featured": true,
-    "ProductBrandId": 2
+    "Price": 105,
+    "PictureUrl": "images/products/adidas2.png",
+    "FeaturedId": 1,
+    "ProductTypeId": 6,
+    "ProductBrandId": 2,
+    "Rating": 4.5
   },
   {
-    "Name": "Green React Woolen Hat",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 8,
-    "PictureUrl": "images/products/hat-react1.png",
-    "ProductTypeId": 2,
-    "Featured": true,
-    "ProductBrandId": 4
-  },
-  {
-    "Name": "Purple React Woolen Hat",
-    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 15,
-    "PictureUrl": "images/products/hat-react2.png",
-    "ProductTypeId": 2,
-    "Featured": false,
-    "ProductBrandId": 4
-  },
-  {
-    "Name": "Blue Code Gloves",
-    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-    "Price": 18,
-    "PictureUrl": "images/products/glove-code1.png",
-    "ProductTypeId": 4,
-    "Featured": false,
-    "ProductBrandId": 3
-  },
-  {
-    "Name": "Green Code Gloves",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 15,
-    "PictureUrl": "images/products/glove-code2.png",
-    "ProductTypeId": 4,
-    "Featured": false,
-    "ProductBrandId": 3
-  },
-  {
-    "Name": "Purple React Gloves",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
-    "Price": 16,
-    "PictureUrl": "images/products/glove-react1.png",
-    "ProductTypeId": 4,
-    "Featured": false,
-    "ProductBrandId": 4
-  },
-  {
-    "Name": "Green React Gloves",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 14,
-    "PictureUrl": "images/products/glove-react2.png",
-    "ProductTypeId": 4,
-    "Featured": false,
-    "ProductBrandId": 4
-  },
-  {
-    "Name": "Redis Red Boots",
-    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-    "Price": 250,
-    "PictureUrl": "images/products/boot-redis1.png",
-    "ProductTypeId": 3,
-    "Featured": false,
-    "ProductBrandId": 6
-  },
-  {
-    "Name": "Core Red Boots",
-    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-    "Price": 189.99,
-    "PictureUrl": "images/products/boot-core2.png",
-    "ProductTypeId": 3,
-    "Featured": false,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Core Purple Boots",
-    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-    "Price": 199.99,
-    "PictureUrl": "images/products/boot-core1.png",
-    "ProductTypeId": 3,
-    "Featured": false,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Angular Purple Boots",
-    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
-    "Price": 150,
-    "PictureUrl": "images/products/boot-ang2.png",
-    "ProductTypeId": 3,
-    "Featured": false,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Angular Blue Boots",
+    "Name": "New Balance 550 Cyan",
     "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     "Price": 180,
-    "PictureUrl": "images/products/boot-ang1.png",
+    "PictureUrl": "images/products/new2.png",
     "ProductTypeId": 3,
-    "Featured": false,
-    "ProductBrandId": 1
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 4
+  },
+  {
+    "Name": "Puma Vikky V2 Lifestyle Shoes",
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 215,
+    "PictureUrl": "images/products/puma2.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Van Classic Slip-On Shoes",
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
+    "Price": 180.67,
+    "PictureUrl": "images/products/vans2.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 4.5
+  },
+  {
+    "Name": "Nike Air Max Zephyr NSW",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 315,
+    "PictureUrl": "images/products/nike3.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Core Sport ",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Price": 160,
+    "PictureUrl": "images/products/adidas3.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4.5
+  },
+  {
+    "Name": "New Balance BB Twilight",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 214,
+    "PictureUrl": "images/products/new3.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 4
+  },
+  {
+    "Name": "Puma Turin II White Lace-Up Casual",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 250,
+    "PictureUrl": "images/products/puma3.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans Men's SK8 Sneakers",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 189.99,
+    "PictureUrl": "images/products/vans3.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 4
+  },
+  {
+    "Name": "Nike Revolution 6 Running red",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 199.99,
+    "PictureUrl": "images/products/nike4.png",
+    "ProductTypeId": 4,
+    "FeaturedId": 3,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Neo Coneo Qt",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci",
+    "Price": 150,
+    "PictureUrl": "images/products/adidas4.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4.3
+  },
+  {
+    "Name": "New Balance Fresh Foam",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 180,
+    "PictureUrl": "images/products/new4.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 5
+  },
+  {
+    "Name": "Puma R78 Voyage Premium",
+    "Description": "Mauris eget neque at sem venenatis eleifend. Ut nonummy.Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci",
+    "Price": 180,
+    "PictureUrl": "images/products/puma4.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans Old Skool Sneakers in Black",
+    "Description": "Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 180,
+    "PictureUrl": "images/products/vans4.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 5
+  },
+  {
+    "Name": "Nike Revolution 6 Running Black",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna..",
+    "Price": 220.89,
+    "PictureUrl": "images/products/nike5.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 4.5
+  },
+  {
+    "Name": "ADIDAS Sports Runfalcon",
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 106.99,
+    "PictureUrl": "images/products/adidas5.png",
+    "FeaturedId": 1,
+    "ProductTypeId": 6,
+    "ProductBrandId": 2,
+    "Rating": 4.5
+  },
+  {
+    "Name": "New Balance 550 Syracuse",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 184.99,
+    "PictureUrl": "images/products/new5.png",
+    "ProductTypeId": 4,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 4
+  },
+  {
+    "Name": "Puma Future Rider New Core",
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 225,
+    "PictureUrl": "images/products/puma5.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 2,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans Skate Slip-On Shoes",
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
+    "Price": 181.99,
+    "PictureUrl": "images/products/vans5.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 4.5
+  },
+  {
+    "Name": "Nike SB charge Premium NSW",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 325.88,
+    "PictureUrl": "images/products/nike6.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Core Courtset ",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Price": 140.55,
+    "PictureUrl": "images/products/adidas6.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4.5
+  },
+  {
+    "Name": "New Balance 550 Salt",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 114.99,
+    "PictureUrl": "images/products/new6.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 4
+  },
+  {
+    "Name": "Puma Cali Star White - Black ",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 240.78,
+    "PictureUrl": "images/products/puma6.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 2,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans UA Authentic Rood",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 179.99,
+    "PictureUrl": "images/products/vans6.png",
+    "ProductTypeId": 4,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 4
+  },
+  {
+    "Name": "Nike p-600 Snake",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 189.95,
+    "PictureUrl": "images/products/nike7.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Superstar Slip-on",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci",
+    "Price": 150.89,
+    "PictureUrl": "images/products/adidas7.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4.3
+  },
+  {
+    "Name": "New Balance FuelCell",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 180.54,
+    "PictureUrl": "images/products/new7.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 5
+  },
+  {
+    "Name": "Puma Pure XT Moto",
+    "Description": "Mauris eget neque at sem venenatis eleifend. Ut nonummy.Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci",
+    "Price": 160.89,
+    "PictureUrl": "images/products/puma7.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans Old Skool Sneakers in Pink",
+    "Description": "Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 184.99,
+    "PictureUrl": "images/products/vans7.png",
+    "ProductTypeId": 4,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 5
+  },
+  {
+    "Name": "Nike Air Max Grey",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 215.89,
+    "PictureUrl": "images/products/nike8.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Sneakers Gazelle",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Price": 150.99,
+    "PictureUrl": "images/products/adidas8.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4.5
+  },
+  {
+    "Name": "New Balance 550",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 204.88,
+    "PictureUrl": "images/products/new8.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 4
+  },
+  {
+    "Name": "Puma Grip Fusion Pro 3.0",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 240,
+    "PictureUrl": "images/products/puma8.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans cheeckers print",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 179.99,
+    "PictureUrl": "images/products/vans8.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 2,
+    "ProductBrandId": 5,
+    "Rating": 4
+  },
+  {
+    "Name": "Nike Court Royale 2 Mid",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 159.99,
+    "PictureUrl": "images/products/nike9.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Core Ultimashow",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci",
+    "Price": 156.77,
+    "PictureUrl": "images/products/adidas9.png",
+    "ProductTypeId": 4,
+    "FeaturedId": 2,
+    "ProductBrandId": 2,
+    "Rating": 4.3
+  },
+  {
+    "Name": "New Balance 327",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 183.99,
+    "PictureUrl": "images/products/new9.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 5
+  },
+  {
+    "Name": "Puma OG Slip On Palmer Spikeless",
+    "Description": "Mauris eget neque at sem venenatis eleifend. Ut nonummy.Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci",
+    "Price": 179.55,
+    "PictureUrl": "images/products/puma9.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans Era Platform Grey Print",
+    "Description": "Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 180.99,
+    "PictureUrl": "images/products/vans9.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 5
+  },
+  {
+    "Name": "Nike Court Legacy",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna..",
+    "Price": 240.89,
+    "PictureUrl": "images/products/nike10.png",
+    "ProductTypeId": 3,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 4.5
+  },
+  {
+    "Name": "ADIDAS Ultraboost 21",
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 106.99,
+    "PictureUrl": "images/products/adidas10.png",
+    "FeaturedId": 1,
+    "ProductTypeId": 6,
+    "ProductBrandId": 2,
+    "Rating": 4.5
+  },
+  {
+    "Name": "New Men's Journal",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 164.99,
+    "PictureUrl": "images/products/new10.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 2,
+    "ProductBrandId": 3,
+    "Rating": 4
+  },
+  {
+    "Name": "Puma Mayze Stack",
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 185.99,
+    "PictureUrl": "images/products/puma10.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans OG SK8-MID LX ",
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna",
+    "Price": 301.99,
+    "PictureUrl": "images/products/vans10.png",
+    "ProductTypeId": 3,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 4.5
+  },
+  {
+    "Name": "Nike MX-720-818 NSW",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 225.98,
+    "PictureUrl": "images/products/nike11.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Tubular Shadow",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Price": 141.55,
+    "PictureUrl": "images/products/adidas11.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4.5
+  },
+  {
+    "Name": "New Balance 860 v9",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 117.99,
+    "PictureUrl": "images/products/new11.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 4
+  },
+  {
+    "Name": "Puma R78 Futr - SPEEDTRAINER",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 220.78,
+    "PictureUrl": "images/products/puma11.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans UY Old Skool",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 179.99,
+    "PictureUrl": "images/products/vans11.png",
+    "ProductTypeId": 4,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 4
+  },
+  {
+    "Name": "Nike Air Max Excee",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 179.95,
+    "PictureUrl": "images/products/nike12.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Performance Asweerun",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci",
+    "Price": 157.89,
+    "PictureUrl": "images/products/adidas12.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4.3
+  },
+  {
+    "Name": "New Balance 22",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 186.59,
+    "PictureUrl": "images/products/new12.png",
+    "ProductTypeId": 4,
+    "FeaturedId": 1,
+    "ProductBrandId": 3,
+    "Rating": 5
+  },
+  {
+    "Name": "Puma Soft Foam Striped",
+    "Description": "Mauris eget neque at sem venenatis eleifend. Ut nonummy.Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci",
+    "Price": 260.89,
+    "PictureUrl": "images/products/puma12.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 4,
+    "Rating": 5
+  },
+  {
+    "Name": "Vans Slip-On Tie-Dye",
+    "Description": "Donec laoreet nonummy augue. habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 284.99,
+    "PictureUrl": "images/products/vans12.png",
+    "ProductTypeId": 2,
+    "FeaturedId": 1,
+    "ProductBrandId": 5,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS NMD_R1 SNEAKERS",
+    "Description": "Vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Price": 241.55,
+    "PictureUrl": "images/products/adidas13.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4.5
+  },
+  {
+    "Name": "ADIDAS Core Advantage",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 117.99,
+    "PictureUrl": "images/products/adidas14.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 3,
+    "ProductBrandId": 2,
+    "Rating": 4
+  },
+  {
+    "Name": "ADIDAS Core Breaknet Plus",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 240.78,
+    "PictureUrl": "images/products/adidas15.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 5
+  },
+  {
+    "Name": "ADIDAS Core Roguera",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 249.99,
+    "PictureUrl": "images/products/adidas16.png",
+    "ProductTypeId": 6,
+    "FeaturedId": 1,
+    "ProductBrandId": 2,
+    "Rating": 4
+  },
+  {
+    "Name": "Nike Air Max 90 Leather",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 210.88,
+    "PictureUrl": "images/products/nike13.png",
+    "ProductTypeId": 4,
+    "ProductBrandId": 1,
+    "FeaturedId": 1,
+    "Rating": 4.5
+  },
+  {
+    "Name": "Nike Air Max Brown Camo",
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna..",
+    "Price": 150.88,
+    "PictureUrl": "images/products/nike14.png",
+    "FeaturedId": 2,
+    "ProductTypeId": 3,
+    "ProductBrandId": 1,
+    "Rating": 4.5
+  },
+  {
+    "Name": "Nike Air Max 97 Reflective Silver",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 170.99,
+    "PictureUrl": "images/products/nike15.png",
+    "FeaturedId": 1,
+    "ProductTypeId": 5,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "Nike Air Max Trainer 1",
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 200.99,
+    "PictureUrl": "images/products/nike16.png",
+    "FeaturedId": 1,
+    "ProductTypeId": 5,
+    "ProductBrandId": 1,
+    "Rating": 4
+  },
+  {
+    "Name": "Nike Jordan Animal Instinct",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 210.78,
+    "PictureUrl": "images/products/nike17.png",
+    "FeaturedId": 3,
+    "ProductTypeId": 5,
+    "ProductBrandId": 1,
+    "Rating": 5
+  },
+  {
+    "Name": "Nike 'White Anthracite",
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna..",
+    "Price": 120.99,
+    "PictureUrl": "images/products/nike18.png",
+    "ProductTypeId": 5,
+    "FeaturedId": 2,
+    "ProductBrandId": 1,
+    "Rating": 4.5
+  },
+  {
+    "Name": "Nike Air Max 1 Crepe Hemp",
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 105,
+    "PictureUrl": "images/products/nike19.png",
+    "FeaturedId": 1,
+    "ProductTypeId": 3,
+    "ProductBrandId": 1,
+    "Rating": 4.5
+  },
+  {
+    "Name": "Nike Air Jordan 1 Mid Diamond",
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 180,
+    "PictureUrl": "images/products/nike20.png",
+    "ProductTypeId": 1,
+    "FeaturedId": 3,
+    "ProductBrandId": 1,
+    "Rating": 4
   }
 ]

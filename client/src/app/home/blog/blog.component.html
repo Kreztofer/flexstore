@@ -4,20 +4,11 @@
     <div class="h-rule_yellow small"></div>
   </div>
   <div class="images">
-    <div>
-      <img src="../../../assets/images/lady2.jpg" alt="" />
-      <h2>FIRST POST</h2>
+    <div *ngFor="let blog of blog">
+      <img src="{{ blog.blogImg }}" alt="{{ blog.title }}" />
+      <h2>{{ blog.title.toUpperCase() }}</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-      </p>
-    </div>
-    <div>
-      <img src="../../../assets/images/man.jpg" alt="" />
-      <h2>SECOND POST</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+        {{ blog.description }}
       </p>
     </div>
   </div>
@@ -36,7 +27,6 @@
           </p>
         </div>
       </div>
-
       <div class="follow">
         <div>
           <hr />

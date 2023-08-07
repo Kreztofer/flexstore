@@ -1,4 +1,6 @@
 
+using System.Dynamic;
+
 namespace Core.Specifications
 {
     public class ProductSpecParams
@@ -7,7 +9,7 @@ namespace Core.Specifications
 
         public int PageIndex { get; set; } = 1;
 
-        private int _pageSize = 9;
+        private int _pageSize = 12;
         public int PageSize
         {
             get => _pageSize;
@@ -16,6 +18,8 @@ namespace Core.Specifications
 
         public int? BrandId { get; set; }
         public int? TypeId { get; set; }
+
+        public int? FeaturedId { get; set; }
         public string Sort { get; set; }
 
         private string _search;

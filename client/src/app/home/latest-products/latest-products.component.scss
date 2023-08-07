@@ -1,9 +1,23 @@
+.heading {
+  margin-top: 130px;
+  h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}
 .latest {
   display: flex;
-  margin-top: 130px;
+  height: 330px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 120px;
+  }
   .description {
     width: 15%;
     padding: 10px;
+    display: none;
     background-color: var(--color-black);
     h2 {
       color: white;
@@ -17,16 +31,28 @@
       font-style: italic;
       font-size: 14px;
     }
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
   }
   .items {
     display: flex;
     justify-content: space-between;
-    width: 85%;
-    height: 40vh;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100%;
     background-color: var(--color-grey);
     .items-wrapper {
-      width: 20%;
       height: 100%;
+      @media screen and (min-width: 1200px) {
+        width: 20%;
+        height: 100%;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: 85%;
+      overflow-x: hidden;
     }
   }
 }

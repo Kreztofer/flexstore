@@ -7,30 +7,53 @@
     <div class="price-rate">
       <p class="price">{{ product.price | currency }}</p>
 
-      <p>
-        <img src="../../../assets/images/ratings.png" alt="" />
-      </p>
+      <div *ngIf="product.rating">
+        <img
+          *ngIf="product.rating <= 3"
+          src="../../assets/images/ratings3.png"
+          alt="rating"
+        />
+        <img
+          *ngIf="product.rating > 3 && product.rating < 4"
+          src="../../assets/images/ratings35.png"
+          alt="rating"
+        />
+        <img
+          *ngIf="product.rating === 4"
+          src="../../assets/images/ratings4.png"
+          alt="rating"
+        />
+        <img
+          *ngIf="product.rating > 4 && product.rating < 5"
+          src="../../assets/images/ratings45.png"
+          alt="rating"
+        />
+        <img
+          *ngIf="product.rating >= 5"
+          src="../../assets/images/ratings.png"
+          alt="rating"
+        />
+      </div>
     </div>
     <hr />
     <p>{{ product.description }}</p>
 
     <div class="add-product">
-      <div class="quantity">
-        <div (click)="decrementQuantity()" class="minus"><p>-</p></div>
+      <div *ngIf="quantity > 0" class="quantity">
+        <div (click)="removeBasketItem(product.id, 1)" class="minus">
+          <p>-</p>
+        </div>
         <span>{{ quantity }}</span>
-        <div (click)="incrementQuantity()" class="plus"><p>+</p></div>
+        <div (click)="addBasketItem(product)" class="plus"><p>+</p></div>
       </div>
-      <button
-        [disabled]="quantity === quantityInBasket"
-        (click)="updateBasket()"
-      >
-        {{ buttonText }}
+      <button *ngIf="quantity === 0" (click)="addBasketItem(product)">
+        ADD TO CART
       </button>
     </div>
     <div class="category">
       <h4>Categories:</h4>
       <div>
-        <p>{{ product.productBrand }},{{ product.productType }}</p>
+        <p>{{ product.productBrand }}, {{ product.productType }}</p>
       </div>
     </div>
     <hr />

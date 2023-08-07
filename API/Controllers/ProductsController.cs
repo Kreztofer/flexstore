@@ -13,14 +13,17 @@ namespace API.Controllers
 
     public class ProductsController : BaseApiController
     {
+        // add featuredrepo
 
         private readonly IGenericRepository<Product> _productsRepo;
         private readonly IGenericRepository<ProductBrand> _productBrandRepo;
         private readonly IGenericRepository<ProductType> _productTypeRepo;
         private readonly IMapper _mapper;
+        private readonly IGenericRepository<FeaturedProduct> _productFeaturedRepo;
 
-        public ProductsController(IGenericRepository<Product> productsRepo, IGenericRepository<ProductBrand> productBrandRepo, IGenericRepository<ProductType> productTypeRepo, IMapper mapper)
+        public ProductsController(IGenericRepository<Product> productsRepo, IGenericRepository<ProductBrand> productBrandRepo, IGenericRepository<ProductType> productTypeRepo, IGenericRepository<FeaturedProduct> productFeaturedRepo, IMapper mapper)
         {
+            _productFeaturedRepo = productFeaturedRepo;
             _mapper = mapper;
             _productTypeRepo = productTypeRepo;
             _productBrandRepo = productBrandRepo;
@@ -66,5 +69,11 @@ namespace API.Controllers
         {
             return Ok(await _productTypeRepo.ListAllAsync());
         }
+        [HttpGet("featured")]
+        public async Task<ActionResult<IReadOnlyList<FeaturedProduct>>> GetFeaturedProducts()
+        {
+            return Ok(await _productFeaturedRepo.ListAllAsync());
+        }
+
     }
 }

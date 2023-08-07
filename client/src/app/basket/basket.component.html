@@ -1,90 +1,32 @@
 <div class="basket">
   <div *ngIf="(basketService.basketSource$ | async) === null">
-    <p>There are no items in your basket</p>
+    <div class="no-item">
+      <div class="desc">
+        <p>
+          It looks like you have no items in your basket, click on the button
+          below to start shopping 😊.
+        </p>
+        <button routerLink="/shop" class="btn-black">SHOP NOW</button>
+      </div>
+      <div class="no-item_img">
+        <img src="../../assets/images/no-item.jpg" alt="" />
+      </div>
+    </div>
   </div>
   <ng-container *ngIf="basketService.basketSource$ | async as basket">
     <div class="basket">
       <div class="row">
-        <div class="table-responsive">
-          <table class="table">
-            <thead class="text-uppercase">
-              <tr>
-                <th><div class="py-2">Product</div></th>
-                <th><div class="py-2">Price</div></th>
-                <th><div class="py-2">Quantity</div></th>
-                <th><div class="py-2">Total</div></th>
-                <th><div class="py-2">Delete</div></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of basket.items">
-                <th>
-                  <div class="p-2 d-inline-block">
-                    <img
-                      class="img-fluid"
-                      src="{{ item.pictureUrl }}"
-                      alt="{{ item.productName }}"
-                      style="max-height: 50px"
-                    />
-                    <div class="ms-3 d-inline-block align-middle">
-                      <h5 class="mb-0">
-                        <a
-                          routerLink="/shop/{{ item.id }}"
-                          class="text-dark text-decoration-none"
-                        >
-                          {{ item.productName }}
-                        </a>
-                      </h5>
-                      <span class="text-muted fst-italic">
-                        Type:{{ item.type }}
-                      </span>
-                    </div>
-                  </div>
-                </th>
-                <td class="align-middle">
-                  <strong>{{ item.price | currency }}</strong>
-                </td>
-                <td class="align-middle">
-                  <div class="d-flex align-items-center">
-                    <i
-                      (click)="removeItem(item.id, 1)"
-                      class="fa fa-minus-circle text-warning me-2"
-                      style="cursor: pointer; font-size: 2em"
-                    ></i>
-                    <strong style="font-size: 1.5em">{{
-                      item.quantity
-                    }}</strong>
-                    <i
-                      (click)="incrementQuantity(item)"
-                      class="fa fa-plus-circle text-warning mx-2"
-                      style="cursor: pointer; font-size: 2em"
-                    ></i>
-                  </div>
-                </td>
-                <td class="align-middle">
-                  <strong>{{ item.price * item.quantity | currency }}</strong>
-                </td>
-                <td class="align-middle">
-                  <a class="text-danger">
-                    <i
-                      (click)="removeItem(item.id, item.quantity)"
-                      class="fa fa-trash"
-                      style="font-size: 2em; cursor: pointer"
-                    ></i>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <app-basket-summary
+          (addItem)="incrementQuantity($event)"
+          (removeItem)="removeItem($event)"
+        >
+        </app-basket-summary>
       </div>
-      <div class="row">
-        <div class="col-6 offset-6">
+      <div class="summary-cont">
+        <div class="summary">
           <app-order-totals></app-order-totals>
           <div class="d-grid" style="margin-bottom: 140px">
-            <a routerLink="/checkout" class="btn btn-outline-primary py-2">
-              Proceed to ckeckout
-            </a>
+            <a routerLink="/checkout" class="btn py-2"> Proceed to ckeckout </a>
           </div>
         </div>
       </div>
