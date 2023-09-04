@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ILatestService } from './latest.interface';
 import { Featured } from 'src/app/shared/models/featured';
 import { HttpClient } from '@angular/common/http';
 import { Pagination } from 'src/app/shared/models/pagination';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LatestService {
-  baseUrl = 'https://localhost:5001/api/';
+  baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
   getLatest(): Observable<Featured[]> {

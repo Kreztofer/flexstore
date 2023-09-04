@@ -5,12 +5,13 @@ import { About } from 'src/app/shared/models/about';
 import { Product } from 'src/app/shared/models/product';
 import { HttpClient } from '@angular/common/http';
 import { Pagination } from 'src/app/shared/models/pagination';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AboutService {
-  baseUrl = 'https://localhost:5001/api/';
+  baseUrl = environment.apiUrl;
   constructor(private http: HttpClient) {}
 
   getAbout(): Observable<About[]> {
