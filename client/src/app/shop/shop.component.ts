@@ -19,7 +19,7 @@ export class ShopComponent implements OnInit {
   brands: Brand[] = [];
   color: Color[] = [];
   img: string = '';
-  shopParams = new ShopParams();
+  shopParams: ShopParams;
   brandId: number = 0;
   sortOptions = [
     { name: 'Alphabetical', value: 'name' },
@@ -32,75 +32,95 @@ export class ShopComponent implements OnInit {
     private shopService: ShopService,
     private activatedRoute: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.shopParams = shopService.getShopParams();
+  }
 
   ngOnInit(): void {
-    this.onNavigateByQueryParams();
+    // this.onNavigateByQueryParams();
     this.getProducts();
     this.getBrands();
     this.getColors();
   }
 
   getProducts() {
-    this.shopService.getProducts(this.shopParams).subscribe({
+    this.shopService.getProducts().subscribe({
       next: (response) => {
         this.products = response.data;
-        this.shopParams.pageNumber = response.pageIndex;
-        this.shopParams.pageSize = response.pageSize;
         this.totalCount = response.count;
       },
       error: (error) => console.log(error),
     });
   }
+
   getBrands() {
     this.shopService.getBrands().subscribe({
       next: (response) => (this.brands = [{ id: 0, name: 'All' }, ...response]),
       error: (error) => console.log(error),
     });
   }
+
   getColors() {
     this.shopService.getColors().subscribe({
       next: (response) => (this.color = [{ id: 0, name: 'All' }, ...response]),
       error: (error) => console.log(error),
     });
   }
-  onNavigateByQueryParams() {
-    this.activatedRoute.queryParamMap.subscribe((param) => {
-      this.shopParams.brandId = Number(param.get('brand'));
-      this.shopParams.pageNumber = 1;
-      this.getProducts();
-    });
-  }
+  // onNavigateByQueryParams() {
+  //   this.activatedRoute.queryParamMap.subscribe((param) => {
+  //     this.shopParams.brandId = Number(param.get('brand'));
+  //     this.shopParams.pageNumber = 1;
+  //     this.getProducts();
+  //   });
+  // }
 
   onBrandSelected(brandId: number) {
-    this.shopParams.brandId = brandId;
-    this.shopParams.pageNumber = 1;
+    const params = this.shopService.getShopParams();
+    params.brandId = brandId;
+    params.pageNumber = 1;
+    this.shopService.setShopParams(params);
+    this.shopParams = params;
     this.getProducts();
   }
   onTypeSelected(typeId: number) {
-    this.shopParams.typeId = typeId;
-    this.shopParams.pageNumber = 1;
+    const params = this.shopService.getShopParams();
+    params.typeId = typeId;
+    params.pageNumber = 1;
+    this.shopService.setShopParams(params);
+    this.shopParams = params;
     this.getProducts();
   }
 
   onSortSelected(event: any) {
-    this.shopParams.sort = event.target.value;
+    const params = this.shopService.getShopParams();
+    params.sort = event.target.value;
+    this.shopService.setShopParams(params);
+    this.shopParams = params;
+
     this.getProducts();
   }
   onPageChanged(event: any) {
-    if (this.shopParams.pageNumber !== event) {
-      this.shopParams.pageNumber = event;
+    const params = this.shopService.getShopParams();
+    if (params.pageNumber !== event) {
+      params.pageNumber = event;
+      this.shopService.setShopParams(params);
+      this.shopParams = params;
       this.getProducts();
     }
   }
   onSearch() {
-    this.shopParams.search = this.searchTerm?.nativeElement.value;
-    this.shopParams.pageNumber = 1;
+    const params = this.shopService.getShopParams();
+    params.search = this.searchTerm?.nativeElement.value;
+    params.pageNumber = 1;
+    this.shopService.setShopParams(params);
+    this.shopParams = params;
+
     this.getProducts();
   }
   onReset() {
     if (this.searchTerm) this.searchTerm.nativeElement.value = '';
     this.shopParams = new ShopParams();
+    this.shopService.setShopParams(this.shopParams);
     this.getProducts();
   }
   toggle() {
