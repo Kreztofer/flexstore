@@ -9,13 +9,28 @@ import { BasketItem } from 'src/app/shared/models/basket';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  constructor(public basketService: BasketService, public accountService: AccountService) {}
+  isMenuOpened: boolean = false;
+  date: any;
+  year: any;
+  
+  constructor(
+    public basketService: BasketService,
+    public accountService: AccountService
+  ) {}
+
+  ngOnInit(): void {
+    this.getDate();
+  }
+
   getCount(items: BasketItem[]) {
     return items.reduce((sum, item) => sum + item.quantity, 0);
   }
 
-  isMenuOpened: boolean = false;
   toggleMenu(): void {
     this.isMenuOpened = !this.isMenuOpened;
+  }
+  getDate() {
+    this.date = new Date();
+    this.year = this.date.getFullYear();
   }
 }

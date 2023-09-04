@@ -12,26 +12,26 @@
     </div>
   </div>
   <div class="about-images">
-    <div class="nike">
+    <div routerLink="/shop" [queryParams]="{ brand: 1 }" class="nike">
       <img src="../../../assets/images/nike.jpg" alt="nike" />
       <div class="overlay">
         <h2>NIKE</h2>
       </div>
     </div>
-    <div class="puma">
+    <div routerLink="/shop" [queryParams]="{ brand: 4 }" class="puma">
       <img src="../../../assets/images/puma.jpg" alt="puma" />
       <div class="overlay">
         <h2>PUMA</h2>
       </div>
     </div>
     <div>
-      <div class="adidas">
+      <div routerLink="/shop" [queryParams]="{ brand: 2 }" class="adidas">
         <img src="../../../assets//images/adidas.jpg" alt="adidas" />
         <div class="overlay">
           <h2>ADIDAS</h2>
         </div>
       </div>
-      <div class="vans">
+      <div routerLink="/shop" [queryParams]="{ brand: 5 }" class="vans">
         <img src="../../../assets//images/vans.jpg" alt="vans" />
         <div class="overlay">
           <h2>VANS</h2>

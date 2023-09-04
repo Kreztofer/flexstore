@@ -92,17 +92,61 @@
       </section>
     </div>
   </div>
+
+  <!-- should be a component but too lazy -->
   <div class="mobile-menu">
-    <div>
+    <div class="sort" (click)="toggle()">
       <p>
         SORT BY
         <img src="../../assets/images/sort.png" alt="sort" />
       </p>
+      <div class="sort-menu shadow-lg" *ngIf="isMenuOpened">
+        <div class="sort-items">
+          <li
+            (click)="onSortClicked(sort.value)"
+            *ngFor="let sort of sortOptions"
+            [value]="sort.value"
+          >
+            {{ sort.name }}
+          </li>
+        </div>
+      </div>
     </div>
-    <div>
+    <div class="categoryMenu" (click)="toggleCategory()">
       <p>
         CATEGORIES <img src="../../assets/images/category.png" alt="category" />
       </p>
+      <div class="category-menu shadow-lg" *ngIf="isCategoryOpened">
+        <div class="cat-items">
+          <div class="brand-wrapper">
+            <h5>Brands</h5>
+            <div class="brands">
+              <li
+                class=""
+                [class.active]="brand.id === shopParams.brandId"
+                [value]="brand.id"
+                (click)="onBrandSelected(brand.id)"
+                *ngFor="let brand of brands"
+              >
+                {{ brand.name }}
+              </li>
+            </div>
+          </div>
+          <div class="color-wrapper">
+            <h5>Color</h5>
+            <div class="color">
+              <li
+                [class.active]="color.id === shopParams.typeId"
+                [value]="color.id"
+                (click)="onTypeSelected(color.id)"
+                *ngFor="let color of color"
+              >
+                {{ color.name }}
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

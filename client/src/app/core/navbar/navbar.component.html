@@ -79,6 +79,76 @@
         }}</span></a
       >
     </div>
-    <i class="menu fa fa-bars"></i>
+    <div class="menu">
+      <a routerLink="/basket" class="me-3 py-2 cart"
+        ><img
+          style="width: 21px; height: 20px; margin-bottom: 4px"
+          class="icon"
+          src="../../../assets/images/cart.png"
+          alt=""
+        />
+        <span *ngIf="basketService.basketSource$ | async as basket">{{
+          getCount(basket.items)
+        }}</span></a
+      >
+      <i
+        (click)="toggleMenu()"
+        style="font-size: 22px; cursor: pointer"
+        class="fa fa-bars"
+      ></i>
+    </div>
   </div>
+</div>
+
+<div class="my-modal shadow-lg" *ngIf="isMenuOpened">
+  <ng-container *ngIf="(accountService.currentUser$ | async) === null">
+    <div dropdown class="dropdown" style="cursor: pointer">
+      <div dropdownToggle>
+        <img
+          class="icon"
+          src="../../../assets/images/account.png"
+          alt="account"
+        />
+      </div>
+      <li class="py-1">
+        <a class="dropdown-item" routerLink="/account/login">
+          <i class="fa fa-sign-in me-3"></i> Login
+        </a>
+      </li>
+    </div>
+  </ng-container>
+
+  <!--  -->
+  <ng-container *ngIf="accountService.currentUser$ | async as user">
+    <div class="mobile-active">
+      <div class="profile-container">
+        <div class="profile2">
+          <p>
+            {{ user.displayName.charAt(0).toUpperCase() }}
+          </p>
+        </div>
+        <p class="name">{{ user.displayName.toUpperCase() }}</p>
+      </div>
+
+      <div class="links">
+        <a class="dropdown-item" routerLink="/">Home</a>
+        <a class="dropdown-item" routerLink="/shop">Shop</a>
+        <a class="dropdown-item" routerLink="/blog">Blog</a>
+        <a class="dropdown-item" routerLink="/basket"> View basket </a>
+        <a class="dropdown-item" routerLink="/orders"> View orders </a>
+      </div>
+      <hr />
+
+      <div class="footer">
+        <a
+          style="cursor: pointer"
+          (click)="accountService.logout()"
+          class="dropdown-item"
+        >
+          Logout
+        </a>
+        <p>© {{ year }} Dominicua - All rights reserved</p>
+      </div>
+    </div>
+  </ng-container>
 </div>
