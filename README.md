@@ -6,3 +6,5 @@ This repo contains the code for the e-commerce application Flexstore, this moder
 The frontend/ client is built with angular js while the backend is written in c# dotnet, entity framework and postgres is the database of choice
 
 enjoy this amazing application
+
+![](client/src/assets/images/gitimg.png)
